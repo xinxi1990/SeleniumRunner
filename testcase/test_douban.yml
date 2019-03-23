@@ -1,0 +1,35 @@
+name: "test for douban"
+test_case_1:
+  - action: "get"
+    location: "http://www.douban.com"
+    time: 1
+  - action: "switch_to_frame"
+    time: 1
+  - action: "click"
+    location: "By.CLASS_NAME,account-tab-account"
+    time: 1
+  - action: "send_keys"
+    location: "By.CLASS_NAME,account-form-input"
+    text: "18513571170"
+    time: 1
+  - action: "send_keys"
+    location: "By.CLASS_NAME,password"
+    text: "11111"
+    time: 1
+test_case_2:
+  - action: "get"
+    location: "http://www.douban.com"
+    time: 1
+  - action: "switch_to_frame"
+    time: 1
+  - action: "click"
+    location: "By.CLASS_NAME,account-tab-account"
+    time: 1
+  - action: "send_keys"
+    location: "By.CLASS_NAME,account-form-input"
+    text: "18513571170"
+    time: 1
+  - action: "send_keys"
+    location: "By.CLASS_NAME,password"
+    text: "11111"
+    time: 1
