@@ -1,0 +1,16 @@
+setup.py
+SeleniumTest.egg-info/PKG-INFO
+SeleniumTest.egg-info/SOURCES.txt
+SeleniumTest.egg-info/dependency_links.txt
+SeleniumTest.egg-info/entry_points.txt
+SeleniumTest.egg-info/requires.txt
+SeleniumTest.egg-info/top_level.txt
+sr/__about__.py
+sr/__init__.py
+sr/cli.py
+sr/common.py
+sr/config.py
+sr/conftest.py
+sr/location.py
+sr/logger.py
+sr/wdriver.py

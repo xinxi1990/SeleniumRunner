@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: SeleniumTest
+Version: 1.0.1
+Summary: write a yaml to test selenium
+Home-page: https://github.com/xinxi1990/SeleniumRunner
+Author: xinxi
+Author-email: xinxi1990@163.com
+License: MIT Licence
+Description: write a yaml to test selenium
+Keywords: pip,SeleniumRunner,Selenium
+Platform: any

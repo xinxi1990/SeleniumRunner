@@ -1,0 +1,6 @@
+__title__ = 'SeleniumRunnr'
+__description__ = 'SeleniumRunnr'
+__version__ = '0.6.8'
+__author__ = 'xinxi'
+__license__ = 'MIT'
+__copyright__ = 'Copyright 2019 xinxi'

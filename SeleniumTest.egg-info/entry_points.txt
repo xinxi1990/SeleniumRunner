@@ -1,0 +1,3 @@
+[console_scripts]
+sr = sr.cli:main_run
+

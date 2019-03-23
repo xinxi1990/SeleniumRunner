@@ -15,7 +15,6 @@ from common import Common
 from wdriver import WDriver
 logger = init_logger()
 
-
 class Location():
 
     def __init__(self,driver):
