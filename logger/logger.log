@@ -755,3 +755,289 @@
 [E 190325 00:13:58 client:83] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
 [I 190325 00:13:58 common:19] 关闭浏览器
 [I 190325 00:13:58 client:91] 结束全部测试
+[I 190325 00:27:08 client:29] 初始化环境
+[I 190325 00:27:08 client:37] 开始测试
+[I 190325 00:27:08 client:48] 加载测试用例
+[I 190325 00:27:11 common:19] 打开浏览器
+[E 190325 00:27:19 location:124] 显示等待元素超时:('id', 'kw1')
+[I 190325 00:27:19 location:158] 截取当前错误
+[E 190325 00:27:20 client:83] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:27:20 common:19] 关闭浏览器
+[I 190325 00:27:22 common:19] 打开浏览器
+[E 190325 00:27:30 location:124] 显示等待元素超时:('id', 'kw2')
+[I 190325 00:27:30 location:158] 截取当前错误
+[E 190325 00:27:31 client:83] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:27:31 common:19] 关闭浏览器
+[I 190325 00:27:31 client:91] 结束全部测试
+[I 190325 00:28:18 client:29] 初始化环境
+[I 190325 00:28:18 client:37] 开始测试
+[I 190325 00:28:18 client:48] 加载测试用例
+[I 190325 00:28:21 common:19] 打开浏览器
+[I 190325 00:28:33 client:135] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/.DS_Store
+[I 190325 00:28:33 client:135] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:28:33 client:135] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:28:33 client:135] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:28:33 client:29] 初始化环境
+[I 190325 00:28:33 client:37] 开始测试
+[I 190325 00:28:33 client:48] 加载测试用例
+[I 190325 00:28:36 common:19] 打开浏览器
+[I 190325 00:28:38 common:19] 关闭浏览器
+[I 190325 00:28:38 client:37] 开始测试
+[I 190325 00:28:38 client:48] 加载测试用例
+[I 190325 00:28:41 common:19] 打开浏览器
+[I 190325 00:28:45 common:19] 关闭浏览器
+[I 190325 00:28:45 client:37] 开始测试
+[I 190325 00:28:45 client:48] 加载测试用例
+[I 190325 00:28:47 common:19] 打开浏览器
+[I 190325 00:28:50 common:19] 关闭浏览器
+[I 190325 00:28:50 client:37] 开始测试
+[I 190325 00:28:50 client:48] 加载测试用例
+[I 190325 00:28:53 common:19] 打开浏览器
+[I 190325 00:28:55 common:19] 关闭浏览器
+[I 190325 00:28:55 client:91] 结束全部测试
+[I 190325 00:29:17 client:135] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/.DS_Store
+[I 190325 00:29:17 client:135] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:29:17 client:135] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:29:17 client:135] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:29:17 client:29] 初始化环境
+[I 190325 00:29:17 client:37] 开始测试
+[I 190325 00:29:17 client:48] 加载测试用例
+[I 190325 00:29:20 common:19] 打开浏览器
+[I 190325 00:29:22 common:19] 关闭浏览器
+[I 190325 00:29:22 client:37] 开始测试
+[I 190325 00:29:22 client:48] 加载测试用例
+[I 190325 00:29:25 common:19] 打开浏览器
+[I 190325 00:29:28 common:19] 关闭浏览器
+[I 190325 00:29:28 client:37] 开始测试
+[I 190325 00:29:28 client:48] 加载测试用例
+[I 190325 00:29:30 common:19] 打开浏览器
+[I 190325 00:29:33 common:19] 关闭浏览器
+[I 190325 00:29:33 client:37] 开始测试
+[I 190325 00:29:33 client:48] 加载测试用例
+[I 190325 00:29:35 common:19] 打开浏览器
+[I 190325 00:29:38 common:19] 关闭浏览器
+[I 190325 00:29:38 client:91] 结束全部测试
+[I 190325 00:31:08 client:135] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:31:08 client:135] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:31:08 client:135] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:31:08 client:29] 初始化环境
+[I 190325 00:31:08 client:37] 开始测试
+[I 190325 00:31:08 client:48] 加载测试用例
+[I 190325 00:31:57 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:31:57 client:20] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:31:57 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:31:57 client:20] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:31:57 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:31:57 client:20] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:31:57 client:30] 初始化环境
+[I 190325 00:31:57 client:38] 开始测试
+[I 190325 00:31:57 client:49] 加载测试用例
+[I 190325 00:32:00 common:19] 打开浏览器
+[I 190325 00:32:20 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:32:20 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:32:20 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:32:20 client:30] 初始化环境
+[I 190325 00:32:20 client:38] 开始测试
+[I 190325 00:32:20 client:49] 加载测试用例
+[I 190325 00:32:35 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:32:35 client:20] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:32:35 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:32:35 client:20] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:32:35 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:32:35 client:20] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:32:35 client:30] 初始化环境
+[I 190325 00:32:35 client:38] 开始测试
+[I 190325 00:32:35 client:49] 加载测试用例
+[I 190325 00:32:38 common:19] 打开浏览器
+[I 190325 00:33:32 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:33:32 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:33:32 client:136] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:33:32 client:29] 初始化环境
+[I 190325 00:33:32 client:37] 开始测试
+[I 190325 00:33:32 client:48] 加载测试用例
+[I 190325 00:33:32 client:50] {'test_case_1': [{'action': 'open_brower', 'location': 'http://www.baidu.com', 'time': 1}, {'action': 'send_keys', 'text': 'test selenium', 'location': 'By.ID,kw', 'time': 1}], 'name': 'test for baidu'}
+[I 190325 00:33:34 common:19] 打开浏览器
+[I 190325 00:33:37 common:19] 关闭浏览器
+[I 190325 00:33:37 client:37] 开始测试
+[I 190325 00:33:37 client:48] 加载测试用例
+[I 190325 00:33:37 client:50] {'test_case_1': [{'action': 'open_brower', 'location': 'http://www.baidu.com', 'time': 1}, {'action': 'send_keys', 'text': 'test selenium', 'location': 'By.ID,kw', 'time': 1}], 'name': 'test for baidu'}
+[I 190325 00:33:40 common:19] 打开浏览器
+[I 190325 00:33:42 common:19] 关闭浏览器
+[I 190325 00:33:42 client:37] 开始测试
+[I 190325 00:33:42 client:48] 加载测试用例
+[I 190325 00:33:42 client:50] {'test_case_1': [{'action': 'open_brower', 'location': 'http://www.baidu.com', 'time': 1}, {'action': 'send_keys', 'text': 'test selenium', 'location': 'By.ID,kw', 'time': 1}], 'name': 'test for baidu'}
+[I 190325 00:33:45 common:19] 打开浏览器
+[I 190325 00:35:11 client:122] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:35:11 client:17] 初始化环境
+[I 190325 00:35:11 client:122] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:35:11 client:17] 初始化环境
+[I 190325 00:35:11 client:122] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:35:11 client:17] 初始化环境
+[I 190325 00:35:11 client:34] 加载测试用例
+[I 190325 00:35:11 client:36] {'test_case_1': [{'action': 'open_brower', 'location': 'http://www.douban.com', 'time': 1}, {'action': 'switch_to_frame', 'time': 1}, {'action': 'click', 'location': 'By.CLASS_NAME,account-tab-account', 'time': 1}, {'action': 'send_keys', 'text': '18513571170', 'location': 'By.CLASS_NAME,account-form-input', 'time': 1}, {'action': 'send_keys', 'text': '11111', 'location': 'By.CLASS_NAME,password', 'time': 1}], 'name': 'test for douban', 'test_case_2': [{'action': 'open_brower', 'location': 'http://www.douban.com', 'time': 1}, {'action': 'switch_to_frame', 'time': 1}, {'action': 'click', 'location': 'By.CLASS_NAME,account-tab-account', 'time': 1}, {'action': 'send_keys', 'text': '18513571170', 'location': 'By.CLASS_NAME,account-form-input', 'time': 1}, {'action': 'send_keys', 'text': '11111', 'location': 'By.CLASS_NAME,password', 'time': 1}]}
+[I 190325 00:35:14 common:19] 打开浏览器
+[I 190325 00:35:23 common:19] 关闭浏览器
+[I 190325 00:35:26 common:19] 打开浏览器
+[I 190325 00:35:38 common:19] 关闭浏览器
+[I 190325 00:35:38 client:34] 加载测试用例
+[I 190325 00:35:38 client:36] {'test_case_1': [{'action': 'open_brower', 'location': 'http://www.baidu.com', 'time': 1}, {'action': 'send_keys', 'text': 'test selenium', 'location': 'By.ID,kw1', 'time': 1}], 'name': 'test for baidu', 'test_case_2': [{'action': 'open_brower', 'location': 'http://www.baidu.com', 'time': 1}, {'action': 'send_keys', 'text': 'test selenium', 'location': 'By.ID,kw2', 'time': 1}]}
+[I 190325 00:35:40 common:19] 打开浏览器
+[E 190325 00:35:48 location:124] 显示等待元素超时:('id', 'kw1')
+[I 190325 00:35:48 location:158] 截取当前错误
+[E 190325 00:35:49 client:70] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:35:49 common:19] 关闭浏览器
+[I 190325 00:35:51 common:19] 打开浏览器
+[E 190325 00:35:59 location:124] 显示等待元素超时:('id', 'kw2')
+[I 190325 00:35:59 location:158] 截取当前错误
+[E 190325 00:35:59 client:70] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:35:59 common:19] 关闭浏览器
+[I 190325 00:35:59 client:34] 加载测试用例
+[I 190325 00:35:59 client:36] {'test_case_1': [{'action': 'open_brower', 'location': 'http://www.baidu.com', 'time': 1}, {'action': 'send_keys', 'text': 'test selenium', 'location': 'By.ID,kw', 'time': 1}], 'name': 'test for baidu'}
+[I 190325 00:36:02 common:19] 打开浏览器
+[I 190325 00:36:05 common:19] 关闭浏览器
+[I 190325 00:36:05 client:78] 结束全部测试
+[I 190325 00:42:30 client:120] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:42:30 client:18] 初始化环境
+[I 190325 00:42:30 client:120] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:42:30 client:18] 初始化环境
+[I 190325 00:42:30 client:120] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:42:30 client:18] 初始化环境
+[I 190325 00:42:30 client:34] 加载测试用例
+[I 190325 00:42:33 common:19] 打开浏览器
+[I 190325 00:42:46 common:19] 关闭浏览器
+[I 190325 00:42:49 common:19] 打开浏览器
+[I 190325 00:43:05 common:19] 关闭浏览器
+[I 190325 00:43:05 client:34] 加载测试用例
+[I 190325 00:43:08 common:19] 打开浏览器
+[E 190325 00:43:16 location:124] 显示等待元素超时:('id', 'kw1')
+[I 190325 00:43:16 location:158] 截取当前错误
+[E 190325 00:43:17 client:69] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:43:17 common:19] 关闭浏览器
+[I 190325 00:43:20 common:19] 打开浏览器
+[E 190325 00:43:28 location:124] 显示等待元素超时:('id', 'kw2')
+[I 190325 00:43:28 location:158] 截取当前错误
+[E 190325 00:43:28 client:69] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:43:28 common:19] 关闭浏览器
+[I 190325 00:43:28 client:34] 加载测试用例
+[I 190325 00:43:31 common:19] 打开浏览器
+[I 190325 00:43:34 common:19] 关闭浏览器
+[I 190325 00:43:34 client:80] 结束全部测试
+[I 190325 00:44:25 client:120] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:44:25 client:18] 初始化环境
+[I 190325 00:44:25 client:120] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:44:25 client:18] 初始化环境
+[I 190325 00:44:25 client:120] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:44:25 client:18] 初始化环境
+[I 190325 00:44:25 client:133] 本次共执行:3组测试用例
+[I 190325 00:44:25 client:34] 加载测试用例
+[I 190325 00:44:28 common:19] 打开浏览器
+[I 190325 00:44:37 common:19] 关闭浏览器
+[I 190325 00:44:40 common:19] 打开浏览器
+[I 190325 00:44:48 common:19] 关闭浏览器
+[I 190325 00:44:48 client:34] 加载测试用例
+[I 190325 00:44:51 common:19] 打开浏览器
+[E 190325 00:44:58 location:124] 显示等待元素超时:('id', 'kw1')
+[I 190325 00:44:58 location:158] 截取当前错误
+[E 190325 00:44:59 client:69] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:44:59 common:19] 关闭浏览器
+[I 190325 00:45:01 common:19] 打开浏览器
+[E 190325 00:45:09 location:124] 显示等待元素超时:('id', 'kw2')
+[I 190325 00:45:09 location:158] 截取当前错误
+[E 190325 00:45:10 client:69] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:45:10 common:19] 关闭浏览器
+[I 190325 00:45:10 client:34] 加载测试用例
+[I 190325 00:45:12 common:19] 打开浏览器
+[I 190325 00:45:15 common:19] 关闭浏览器
+[I 190325 00:45:15 client:80] 结束全部测试
+[I 190325 00:45:15 client:137] 3
+[I 190325 00:45:15 client:138] *************
+[I 190325 00:51:28 client:123] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:51:28 client:18] 初始化环境
+[I 190325 00:51:28 client:123] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:51:28 client:18] 初始化环境
+[I 190325 00:51:28 client:123] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:51:28 client:18] 初始化环境
+[I 190325 00:51:28 client:136] 本次共执行:3组测试用例
+[I 190325 00:51:28 client:34] 加载测试用例
+[I 190325 00:51:31 common:19] 打开浏览器
+[I 190325 00:51:39 common:19] 关闭浏览器
+[I 190325 00:51:42 common:19] 打开浏览器
+[I 190325 00:51:49 common:19] 关闭浏览器
+[I 190325 00:51:49 client:34] 加载测试用例
+[I 190325 00:51:52 common:19] 打开浏览器
+[E 190325 00:52:00 location:133] 显示等待元素超时:('id', 'kw1')
+[I 190325 00:52:00 location:167] 截取当前错误
+[E 190325 00:52:01 client:70] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:52:01 common:19] 关闭浏览器
+[I 190325 00:52:03 common:19] 打开浏览器
+[E 190325 00:52:11 location:133] 显示等待元素超时:('id', 'kw2')
+[I 190325 00:52:11 location:167] 截取当前错误
+[E 190325 00:52:12 client:70] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:52:12 common:19] 关闭浏览器
+[I 190325 00:52:12 client:34] 加载测试用例
+[I 190325 00:52:14 common:19] 打开浏览器
+[I 190325 00:52:17 common:19] 关闭浏览器
+[I 190325 00:52:17 client:83] 结束全部测试
+[I 190325 00:52:17 client:140] 0
+[I 190325 00:52:17 client:141] *************
+[I 190325 00:53:57 client:123] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 00:53:57 client:18] 初始化环境
+[I 190325 00:53:57 client:123] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 00:53:57 client:18] 初始化环境
+[I 190325 00:53:57 client:123] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 00:53:57 client:18] 初始化环境
+[I 190325 00:53:57 client:136] 本次共执行:3组测试用例
+[I 190325 00:53:57 client:34] 加载测试用例
+[I 190325 00:54:45 client:18] 初始化环境
+[I 190325 00:54:45 client:136] 本次共执行:1组测试用例
+[I 190325 00:54:45 client:34] 加载测试用例
+[I 190325 00:54:47 common:19] 打开浏览器
+[E 190325 00:54:55 location:134] 显示等待元素超时:('id', 'kw1')
+[I 190325 00:54:55 location:168] 截取当前错误
+[E 190325 00:54:56 client:70] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:54:56 common:19] 关闭浏览器
+[I 190325 00:54:58 common:19] 打开浏览器
+[E 190325 00:55:06 location:134] 显示等待元素超时:('id', 'kw2')
+[I 190325 00:55:06 location:168] 截取当前错误
+[E 190325 00:55:07 client:70] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:55:07 common:19] 关闭浏览器
+[I 190325 00:55:07 client:83] 结束全部测试
+[I 190325 00:55:07 client:140] 0
+[I 190325 00:55:07 client:141] *************
+[W 190325 00:56:04 client:105] *****************************************************************
+[I 190325 00:56:04 client:18] 初始化环境
+[I 190325 00:56:04 client:137] 本次共执行:1组测试用例
+[I 190325 00:56:04 client:34] 加载测试用例
+[I 190325 00:56:07 common:19] 打开浏览器
+[W 190325 00:57:15 client:105] *****************************************************************
+[I 190325 00:57:15 client:18] 初始化环境
+[I 190325 00:57:15 client:137] 本次共执行:1组测试用例
+[I 190325 00:57:15 client:34] 加载测试用例
+[I 190325 00:57:18 common:19] 打开浏览器
+[E 190325 00:57:26 location:133] 显示等待元素超时:('id', 'kw1')
+[E 190325 00:57:26 client:70] 加载测试用例异常:global name 'fail_info' is not defined
+[I 190325 00:57:26 common:19] 关闭浏览器
+[I 190325 00:57:28 common:19] 打开浏览器
+[E 190325 00:57:36 location:133] 显示等待元素超时:('id', 'kw2')
+[E 190325 00:57:36 client:70] 加载测试用例异常:global name 'fail_info' is not defined
+[I 190325 00:57:36 common:19] 关闭浏览器
+[I 190325 00:57:36 client:83] 结束全部测试
+[I 190325 00:57:36 client:141] 0
+[W 190325 00:57:36 client:142] *****************************************************************
+[W 190325 00:57:40 client:105] *****************************************************************
+[I 190325 00:57:40 client:18] 初始化环境
+[I 190325 00:57:40 client:137] 本次共执行:1组测试用例
+[I 190325 00:57:40 client:34] 加载测试用例
+[I 190325 00:57:42 common:19] 打开浏览器
+[E 190325 00:57:50 location:133] 显示等待元素超时:('id', 'kw1')
+[I 190325 00:57:50 location:172] 截取当前错误
+[E 190325 00:57:51 client:70] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:57:51 common:19] 关闭浏览器
+[I 190325 00:57:53 common:19] 打开浏览器
+[E 190325 00:58:01 location:133] 显示等待元素超时:('id', 'kw2')
+[I 190325 00:58:01 location:172] 截取当前错误
+[E 190325 00:58:02 client:70] 加载测试用例异常:'NoneType' object has no attribute 'send_keys'
+[I 190325 00:58:02 common:19] 关闭浏览器
+[I 190325 00:58:02 client:83] 结束全部测试
+[I 190325 00:58:02 client:141] 0
+[W 190325 00:58:02 client:142] *****************************************************************

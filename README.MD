@@ -8,9 +8,18 @@ python main.py sc --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/te
 ```
 #  安装包运行
 ```angularjs
-sr --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/main.py 
+sr --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/main.py /
                   --driver_path /Users/xinxi/PycharmProjects/SeleniumRunner/sr/entity/chromedriver_mac
 ```
+
+
+# 多用例执行
+```angularjs
+python main.py sr --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/testcase /
+                --driver_path /Users/xinxi/PycharmProjects/SeleniumRunner/entity/chromedriver_mac
+
+```
+
 
 
 # 打包

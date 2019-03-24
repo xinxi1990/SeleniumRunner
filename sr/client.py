@@ -9,32 +9,18 @@ from logger import init_logger
 from config import report_folder
 logger = init_logger()
 
+total_base64_image_list = []
 
 class MainTest(unittest.TestCase):
 
 
     def __init__(self, methodName='runTest', param=None):
+        logger.info("初始化环境")
         super(MainTest, self).__init__(methodName)
         testcase_path = param["testcase_path"]
         self.driver_path = param["driver_path"]
-        global testcase_path
-        global driver_path
+        self.case_info = MainTest.load_case_file(testcase_path)
 
-
-
-    @classmethod
-    def setUpClass(cls):
-        cls.driver = None
-        cls.location = None
-        logger.info("初始化环境")
-        cls.case_info = cls.load_case_file(testcase_path)
-        global driver
-        global location
-        global case_info
-
-
-    def setUp(self):
-        logger.info("开始测试")
 
 
     @staticmethod
@@ -49,13 +35,14 @@ class MainTest(unittest.TestCase):
         yaml_output = self.case_info
         case_list = dict(yaml_output).keys()
         for test_case in case_list:
+            case_name = yaml_output["name"]
             if test_case != 'name':
                 try:
                     driver = WDriver().init_driver(self.driver_path)
                 except Exception as  e:
                     if driver == None:
                         driver = WDriver().get_driver()
-                location = Location(driver)
+                location = Location(driver,case_name)
                 for case_step in yaml_output[test_case]:
                     try:
                         if case_step['action'] == "open_brower":
@@ -82,35 +69,40 @@ class MainTest(unittest.TestCase):
                     except Exception as e:
                         logger.error("加载测试用例异常:{}".format(e))
                 location.close_brower()
-        print(len(location.get_base64_image_list()))
-        base64_image_list = location.get_base64_image_list()
-        global base64_image_list
+        # print(len(location.get_fail_info_list()))
+        # base64_image_list = location.get_base64_image_list()
+        # total_base64_image_list.append(base64_image_list)
+        # global base64_image_list
+        # global total_base64_image_list
+        print(location.get_fail_info_list())
+
+
 
     @classmethod
     def tearDownClass(cls):
         logger.info("结束全部测试")
 
-
-    def main_run_back():
-        opts, args = getopt.getopt(sys.argv[1:], '-h-f:', ['help', 'filepath='])
-        fileName = None
-        for opt_name, opt_value in opts:
-            if opt_name in ('-h', '--help'):
-                logger.info("帮助")
-                exit()
-            if opt_name in ('-f', '--filepath'):
-                fileName = opt_value
-                logger.info("用例路径:" + fileName)
-
-        suite = unittest.TestSuite()
-        suite.addTest(Main('test_case'))
-        runner = unittest.TextTestRunner()
-        runner.run(suite)
+    # def main_run_back():
+    #     opts, args = getopt.getopt(sys.argv[1:], '-h-f:', ['help', 'filepath='])
+    #     fileName = None
+    #     for opt_name, opt_value in opts:
+    #         if opt_name in ('-h', '--help'):
+    #             logger.info("帮助")
+    #             exit()
+    #         if opt_name in ('-f', '--filepath'):
+    #             fileName = opt_value
+    #             logger.info("用例路径:" + fileName)
+    #
+    #     suite = unittest.TestSuite()
+    #     suite.addTest(Main('test_case'))
+    #     runner = unittest.TextTestRunner()
+    #     runner.run(suite)
 
 
 
 
 def main_run():
+    logger.warning("*****************************************************************")
     parser = argparse.ArgumentParser(
         description='Selenium Testing')
     parser.add_argument(
@@ -119,23 +111,35 @@ def main_run():
     parser.add_argument(
         '--driver_path',
         help="chrome driver路径")
-
     args = parser.parse_args()
     testcase_path = str(args.testcase_path)
     driver_path = str(args.driver_path)
-
     print("\033[0;32m{0}\033[0m".format(testcase_path))
     print("\033[0;32m{0}\033[0m".format(driver_path))
 
     suite = unittest.TestSuite()
-    param = {}
-    param['testcase_path'] = testcase_path
-    param['driver_path'] = driver_path
-    suite.addTest(MainTest('test_case',param=param))
+    if os.path.isdir(testcase_path):
+       for file in os.listdir(testcase_path):
+           testcase_file = os.path.join(testcase_path,file)
+           logger.info(testcase_file)
+           param = {}
+           param['testcase_path'] = testcase_file
+           param['driver_path'] = driver_path
+           suite.addTest(MainTest('test_case', param=param))
 
+    elif os.path.isfile(testcase_path):
+        param = {}
+        param['testcase_path'] = testcase_path
+        param['driver_path'] = driver_path
+        suite.addTest(MainTest('test_case', param=param))
+
+    test_count = suite.countTestCases()
+    logger.info("本次共执行:{}组测试用例".format(test_count))
     runner = unittest.TextTestRunner()
     runner.run(suite)
     #debug模式
+    logger.info(len(total_base64_image_list))
+    logger.warning("*****************************************************************")
 
     # from HTMLTestRunner_cn.HTMLTestRunner_cn import HTMLTestRunner
     # current_now = time.strftime("%Y%m%d%H%M%S", time.localtime())

@@ -17,11 +17,14 @@ from exception import LocationError
 logger = init_logger()
 
 base64_image_list = []
+fail_info_list = []
+
 
 class Location():
 
-    def __init__(self,driver):
+    def __init__(self,driver,case_name):
         self.driver = driver
+        self.case_name = case_name
 
 
     def location_element(self,location):
@@ -80,8 +83,14 @@ class Location():
                 return (By.TAG_NAME, value)
         except Exception as e:
             logger.info("捕获异常:{}".format(e))
-            base64_image_list.append(self.screenshot_as_base64())
-            global base64_image_list
+            fail_info = {}
+            fail_info["case_name"] = self.case_name
+            fail_info["fail_info"] = self.screenshot_as_base64()
+            # base64_image_list.append(self.screenshot_as_base64())
+            # global base64_image_list
+            fail_info_list.append(fail_info)
+            global fail_info_list
+
 
 
     @Common.print_loggr("打开浏览器")
@@ -122,8 +131,14 @@ class Location():
             return element
         except Exception as e:
             logger.error("显示等待元素超时:{}".format(loc))
-            base64_image_list.append(self.screenshot_as_base64())
-            global base64_image_list
+            fail_info = {}
+            fail_info["case_name"] = self.case_name
+            ail_info["fail_info"] = "显示等待元素超时:{}".format(loc)
+            fail_info["fail_sceenshot"] = self.screenshot_as_base64()
+            # base64_image_list.append(self.screenshot_as_base64())
+            # global base64_image_list
+            fail_info_list.append(fail_info)
+            global fail_info_list
 
 
 
@@ -161,6 +176,9 @@ class Location():
 
     def get_base64_image_list(self):
         return base64_image_list
+
+    def get_fail_info_list(self):
+        return fail_info_list
 
 
     def wait_sleep(self,wait_time):
