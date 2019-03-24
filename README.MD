@@ -1,12 +1,12 @@
 # 介绍
 基于yaml文件管理测试用例,做selenium自动化测试
 
-# 源码使用
+# 源码运行
 ```angularjs
-python main.py src --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml /
+python main.py sc --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml /
                   --driver_path /Users/xinxi/PycharmProjects/SeleniumRunner/entity/chromedriver_mac
 ```
-#  sr运行
+#  安装包运行
 ```angularjs
 sr --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/main.py 
                   --driver_path /Users/xinxi/PycharmProjects/SeleniumRunner/sr/entity/chromedriver_mac
@@ -38,11 +38,72 @@ twine upload dist/*
 
 
 # 事件列表
-```angularjs
 
+## 打开网站
+```angularjs
+action: "open_brower"
+location: "http://www.baidu.com"
+time: 1
+```
+## 点击元素
+```angularjs
+action: "click"
+location: "By.CLASS_NAME,account-tab-account"
+time: 1
 ```
 
+## 输入文字
+```angularjs
+action: "send_keys"
+location: "By.ID,kw"
+text: "test selenium"
+time: 1
+```
+
+## 切换frame
+```angularjs
+action: "switch_to_frame"
+```
+
+## 切换窗体
+```angularjs
+action: "switch_windows"
+```
+
+
+
+## 向上滑动
+```angularjs
+action: "scroll_top"
+```
+
+## 向下滑动
+```angularjs
+action: "scroll_down"
+```
+
+
 # 用例编写
+```
+name: "test for douban"
+test_case_1:
+  - action: "open_brower"
+    location: "http://www.douban.com"
+    time: 1
+  - action: "switch_to_frame"
+    time: 1
+  - action: "click"
+    location: "By.CLASS_NAME,account-tab-account"
+    time: 1
+  - action: "send_keys"
+    location: "By.CLASS_NAME,account-form-input"
+    text: "18513571170"
+    time: 1
+  - action: "send_keys"
+    location: "By.CLASS_NAME,password"
+    text: "11111"
+    time: 1
+```
 
 
 # 断言
