@@ -15,7 +15,7 @@ from setuptools import Command, find_packages, setup
 
 about = {}
 here = os.path.abspath(os.path.dirname(__file__))
-with io.open(os.path.join(here, 'sr', '__about__.py'), encoding='utf-8') as f:
+with io.open(os.path.join(here, 'src', '__about__.py'), encoding='utf-8') as f:
     exec(f.read(), about)
 
 class InstallCommand(Command):
@@ -62,7 +62,7 @@ class InstallCommand(Command):
 
 setup(
     name = "SeleniumTest",      #这里是pip项目发布的名称
-    version = "1.0.1",  #版本号，数值大的会优先被pip
+    version = "1.0.4",  #版本号，数值大的会优先被pip
     keywords = ("pip", "SeleniumRunner","Selenium"),
     description = "write a yaml to test selenium",
     long_description = "write a yaml to test selenium",
@@ -78,7 +78,10 @@ setup(
     install_requires = ["selenium"],          #这个项目需要的第三方库
     entry_points = {
                        'console_scripts': [
-                           'sr=sr.cli:main_run'
+                           'src=src.client:main_run'
                        ]
                    },
+    cmdclass={
+        'upload': InstallCommand
+    }
 )

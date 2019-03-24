@@ -1,0 +1,11 @@
+name: "test for baidu"
+test_case_1:
+  - action: "get"
+    location: "http://www.baidu.com"
+    time: 1
+  - action: "send_keys"
+    location: "By.ID,kw"
+    text: "test selenium"
+    time: 1
+
+

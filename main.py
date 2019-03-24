@@ -2,11 +2,11 @@
 #-*- coding:utf-8 -*-
 
 import sys
-from sr.cli import main_run
+from src.cli import main_run
 
 cmd = sys.argv.pop(1)
 
-if cmd in ["sr"]:
+if cmd in ["src"]:
     main_run()
 
 else:

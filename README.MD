@@ -1,10 +1,17 @@
 # 介绍
 基于yaml文件管理测试用例,做selenium自动化测试
 
-# 使用
+# 源码使用
 ```angularjs
-python main.py sr  /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+python main.py src --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml /
+                  --driver_path /Users/xinxi/PycharmProjects/SeleniumRunner/entity/chromedriver_mac
 ```
+#  sr运行
+```angularjs
+sr --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/main.py 
+                  --driver_path /Users/xinxi/PycharmProjects/SeleniumRunner/sr/entity/chromedriver_mac
+```
+
 
 # 打包
 建立setup.py
@@ -28,3 +35,11 @@ pip install twine
 
 # 发布
 twine upload dist/*
+
+
+# 事件列表
+```angularjs
+
+```
+
+# 用例编写
