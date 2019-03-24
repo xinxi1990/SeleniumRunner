@@ -6,8 +6,8 @@ sys.path.append("..")
 from ..logger import init_logger
 logger = init_logger()
 from functools import wraps
-from ..wdriver import WDriver
-driver = WDriver().get_driver()
+
+
 
 
 
@@ -847,7 +847,8 @@ class _TestResult(TestResult):
         #     except Exception:
         #         pass
         try:
-            test.imgs.append(driver.get_screenshot_as_base64())
+            # test.imgs.append(driver.get_screenshot_as_base64())
+            pass
         except Exception:
                 pass
 
@@ -1087,11 +1088,12 @@ class HTMLTestRunner(Template_mixin):
         if getattr(t,'imgs',[]):
             # 判断截图列表，如果有则追加
             tmp = u""
+            t.imgs = base64_image_list
             for i, img in enumerate(t.imgs):
                 if i==0:
-                    tmp+=""" <img src="data:image/jpg;base64,%s" style="display: block;" class="img"/>\n""" % img
+                    tmp+=""" <img sr="data:image/jpg;base64,%s" style="display: block;" class="img"/>\n""" % img
                 else:
-                    tmp+=""" <img src="data:image/jpg;base64,%s" style="display: none;" class="img"/>\n""" % img
+                    tmp+=""" <img sr="data:image/jpg;base64,%s" style="display: none;" class="img"/>\n""" % img
             imgs = self.IMG_TMPL % dict(imgs=tmp)
         else:
             imgs = u"""无截图"""

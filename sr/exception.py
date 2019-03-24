@@ -48,3 +48,7 @@ class SuiteNotFound(NotFoundError):
 
 class TestcaseNotFound(NotFoundError):
     pass
+
+class LocationError(BaseException):
+    pass
+

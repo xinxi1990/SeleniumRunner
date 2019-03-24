@@ -2,11 +2,11 @@
 #-*- coding:utf-8 -*-
 
 import sys
-from src.cli import main_run
+from sr.client import main_run
 
 cmd = sys.argv.pop(1)
 
-if cmd in ["src"]:
+if cmd in ["sr"]:
     main_run()
 
 else:

@@ -1088,9 +1088,9 @@ class HTMLTestRunner(Template_mixin):
             tmp = u""
             for i, img in enumerate(t.imgs):
                 if i==0:
-                    tmp+=""" <img src="data:image/jpg;base64,%s" style="display: block;" class="img"/>\n""" % img
+                    tmp+=""" <img sr="data:image/jpg;base64,%s" style="display: block;" class="img"/>\n""" % img
                 else:
-                    tmp+=""" <img src="data:image/jpg;base64,%s" style="display: none;" class="img"/>\n""" % img
+                    tmp+=""" <img sr="data:image/jpg;base64,%s" style="display: none;" class="img"/>\n""" % img
             imgs = self.IMG_TMPL % dict(imgs=tmp)
         else:
             imgs = u"""无截图"""

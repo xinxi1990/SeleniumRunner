@@ -15,7 +15,7 @@ from setuptools import Command, find_packages, setup
 
 about = {}
 here = os.path.abspath(os.path.dirname(__file__))
-with io.open(os.path.join(here, 'src', '__about__.py'), encoding='utf-8') as f:
+with io.open(os.path.join(here, 'sr', '__about__.py'), encoding='utf-8') as f:
     exec(f.read(), about)
 
 class InstallCommand(Command):
@@ -78,7 +78,7 @@ setup(
     install_requires = ["selenium"],          #这个项目需要的第三方库
     entry_points = {
                        'console_scripts': [
-                           'src=src.client:main_run'
+                           'sr=sr.client:main_run'
                        ]
                    },
     cmdclass={

@@ -43,3 +43,12 @@ twine upload dist/*
 ```
 
 # 用例编写
+
+
+# 断言
+
+https://pypi.org/project/PyHamcrest/
+
+
+# bdd驱动
+https://github.com/pytest-dev/pytest-bdd

@@ -1,0 +1,16 @@
+Pipfile
+*.pyc
+*.log
+.idea/
+venv/
+ENV/
+nohup.out
+logger/*
+build/*
+dist/*
+entity/*
+demo/*
+src/report/*
+src/screen/*
+
+

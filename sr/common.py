@@ -6,7 +6,7 @@ import base64
 from PIL import Image, ImageGrab
 from logger import init_logger
 from config import screen_folder
-logger = init_logger()  # 初始化日志
+logger = init_logger()
 
 
 class Common():
@@ -38,8 +38,3 @@ class Common():
         # 读取文件内容，转换为base64编码
         f.close()
         return ls_f
-
-
-
-if __name__ == '__main__':
-    Common.screen_shot()

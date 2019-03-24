@@ -1,6 +1,6 @@
 name: "test for douban"
 test_case_1:
-  - action: "get"
+  - action: "open_brower"
     location: "http://www.douban.com"
     time: 1
   - action: "switch_to_frame"
@@ -17,7 +17,7 @@ test_case_1:
     text: "11111"
     time: 1
 test_case_2:
-  - action: "get"
+  - action: "open_brower"
     location: "http://www.douban.com"
     time: 1
   - action: "switch_to_frame"

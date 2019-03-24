@@ -362,9 +362,9 @@ function hide_img(obj){
 </div>
 <div class='heading'>
 <h1>SeleniumRunner自动化执行报告</h1>
-<p class='attribute'><strong>开始时间:</strong> 2019-03-24 14:00:55</p>
-<p class='attribute'><strong>耗时:</strong> 0:00:10.664501</p>
-<p class='attribute'><strong>状态:</strong> <span class="tj errorCase">Error</span>1</p>
+<p class='attribute'><strong>开始时间:</strong> 2019-03-24 23:42:24</p>
+<p class='attribute'><strong>耗时:</strong> 0:00:14.585770</p>
+<p class='attribute'><strong>状态:</strong> <span class="tj passCase">Pass</span>1</p>
 
 <p class='description'>用例执行情况:</p>
 </div>
@@ -397,59 +397,35 @@ function hide_img(obj){
     <th>错误截图</th>
 </tr>
 
-<tr class='errorClass'>
-    <td>src.cli.MainTest</td>
+<tr class='passClass'>
+    <td>sr.client.MainTest</td>
+    <td>1</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
     <td>&nbsp;</td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td ><div class='testcase'>test_case</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <span class='status errorCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        错误</a></span>
-
-    <div id='div_ft1.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.1: Traceback (most recent call last):
-  File "/Users/xinxi/PycharmProjects/SeleniumRunner/src/cli.py", line 64, in test_case
-    location.display_wait(case_step["time"], element).send_keys(case_step['text'])
-AttributeError: 'NoneType' object has no attribute 'send_keys'
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td><div class='testcase'>test_case</div></td>
+    <td colspan='5' align='center'><span class='status passCase'>通过</span></td>
     <td>无截图</td>
 </tr>
 
 <tr id='total_row'>
     <th>统计</th>
     <th>1</th>
-    <th>0</th>
-    <th>0</th>
     <th>1</th>
+    <th>0</th>
+    <th>0</th>
     <th>&nbsp;</th>
     <th>&nbsp;</th>
 </tr>
 </table>
 <script>
     showCase(1);
-    drawCircle(0, 0, 1);
+    drawCircle(1, 0, 0);
 </script>
 
 <div id='ending'>&nbsp;</div>

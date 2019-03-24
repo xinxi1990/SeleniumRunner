@@ -1,6 +1,6 @@
 name: "test for baidu"
 test_case_1:
-  - action: "get"
+  - action: "open_brower"
     location: "http://www.baidu.com"
     time: 1
   - action: "send_keys"
