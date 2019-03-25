@@ -1615,3 +1615,148 @@
 [I 190325 21:56:04 genreport:47] 报告地址:
     /Users/xinxi/PycharmProjects/SeleniumRunner/sr/report/20190325215604_result.html
 [W 190325 21:56:04 client:129] *****************************************************************
+[I 190325 23:15:55 client:95] *****************************************************************
+[I 190325 23:15:55 client:21] 初始化环境
+[I 190325 23:15:55 client:124] 本次共执行:1组测试用例
+[I 190325 23:15:55 client:36] 加载测试用例
+[I 190325 23:15:59 common:20] 打开浏览器
+[E 190325 23:16:07 location:156] display_wait Exception:('id', 'kw2')
+[E 190325 23:16:07 client:76] 加载测试用例异常:
+[I 190325 23:16:07 common:20] 关闭浏览器
+[I 190325 23:16:10 common:20] 打开浏览器
+[I 190325 23:16:12 common:20] 关闭浏览器
+[I 190325 23:16:13 genreport:47] 报告地址:
+    /Users/xinxi/PycharmProjects/SeleniumRunner/sr/report/20190325231613_result.html
+[I 190325 23:16:13 client:130] *****************************************************************
+[I 190325 23:17:16 client:95] *****************************************************************
+[I 190325 23:17:16 client:113] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 23:17:16 client:21] 初始化环境
+[I 190325 23:17:16 client:113] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban2.yml
+[I 190325 23:17:16 client:21] 初始化环境
+[I 190325 23:17:16 client:113] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 23:17:16 client:21] 初始化环境
+[I 190325 23:17:16 client:113] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 23:17:16 client:21] 初始化环境
+[I 190325 23:17:16 client:124] 本次共执行:4组测试用例
+[I 190325 23:17:16 client:36] 加载测试用例
+[I 190325 23:17:18 common:20] 打开浏览器
+[E 190325 23:17:31 location:156] display_wait Exception:('class name', 'account-tab-account')
+[E 190325 23:17:31 client:76] 加载测试用例异常:
+[E 190325 23:17:37 location:156] display_wait Exception:('class name', 'account-form-input')
+[E 190325 23:17:38 client:76] 加载测试用例异常:
+[E 190325 23:17:43 location:156] display_wait Exception:('class name', 'password')
+[E 190325 23:17:44 client:76] 加载测试用例异常:
+[I 190325 23:17:44 common:20] 关闭浏览器
+[I 190325 23:17:47 common:20] 打开浏览器
+[E 190325 23:17:59 location:156] display_wait Exception:('class name', 'account-tab-account')
+[E 190325 23:18:00 client:76] 加载测试用例异常:
+[E 190325 23:18:05 location:156] display_wait Exception:('class name', 'account-form-input')
+[E 190325 23:18:06 client:76] 加载测试用例异常:
+[E 190325 23:18:11 location:156] display_wait Exception:('class name', 'password')
+[E 190325 23:18:12 client:76] 加载测试用例异常:
+[I 190325 23:18:12 common:20] 关闭浏览器
+[I 190325 23:18:12 client:36] 加载测试用例
+[I 190325 23:18:15 common:20] 打开浏览器
+[I 190325 23:18:33 common:20] 关闭浏览器
+[I 190325 23:18:33 client:36] 加载测试用例
+[I 190325 23:18:36 common:20] 打开浏览器
+[E 190325 23:18:44 location:156] display_wait Exception:('id', 'kw2')
+[E 190325 23:18:44 client:76] 加载测试用例异常:
+[I 190325 23:18:44 common:20] 关闭浏览器
+[I 190325 23:18:48 common:20] 打开浏览器
+[I 190325 23:18:51 common:20] 关闭浏览器
+[I 190325 23:18:51 client:36] 加载测试用例
+[I 190325 23:18:54 common:20] 打开浏览器
+[I 190325 23:18:56 common:20] 关闭浏览器
+[I 190325 23:19:04 genreport:47] 报告地址:
+    /Users/xinxi/PycharmProjects/SeleniumRunner/sr/report/20190325231857_result.html
+[I 190325 23:19:04 client:130] *****************************************************************
+[I 190325 23:21:59 client:96] *****************************************************************
+[I 190325 23:21:59 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 23:21:59 client:21] 初始化环境
+[I 190325 23:21:59 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban2.yml
+[I 190325 23:21:59 client:21] 初始化环境
+[I 190325 23:21:59 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 23:21:59 client:21] 初始化环境
+[I 190325 23:21:59 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 23:21:59 client:21] 初始化环境
+[I 190325 23:21:59 client:125] 本次共执行:4组测试用例
+[I 190325 23:21:59 client:36] 加载测试用例
+[I 190325 23:22:02 common:20] 打开浏览器
+[I 190325 23:22:18 client:96] *****************************************************************
+[I 190325 23:22:18 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 23:22:18 client:21] 初始化环境
+[I 190325 23:22:18 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban2.yml
+[I 190325 23:22:18 client:21] 初始化环境
+[I 190325 23:22:18 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 23:22:18 client:21] 初始化环境
+[I 190325 23:22:18 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 23:22:18 client:21] 初始化环境
+[I 190325 23:22:18 client:125] 本次共执行:4组测试用例
+[I 190325 23:22:18 client:36] 加载测试用例
+[I 190325 23:22:21 common:20] 打开浏览器
+[I 190325 23:22:28 common:20] 关闭浏览器
+[I 190325 23:22:31 common:20] 打开浏览器
+[E 190325 23:22:51 location:156] display_wait Exception:('class name', 'account-tab-account')
+[E 190325 23:22:51 client:76] 用例执行异常:
+[I 190325 23:22:51 common:20] 关闭浏览器
+[I 190325 23:22:51 client:36] 加载测试用例
+[I 190325 23:22:54 common:20] 打开浏览器
+[I 190325 23:23:09 common:20] 关闭浏览器
+[I 190325 23:23:09 client:36] 加载测试用例
+[I 190325 23:23:12 common:20] 打开浏览器
+[E 190325 23:23:20 location:156] display_wait Exception:('id', 'kw2')
+[E 190325 23:23:20 client:76] 用例执行异常:
+[I 190325 23:23:20 common:20] 关闭浏览器
+[I 190325 23:23:23 common:20] 打开浏览器
+[I 190325 23:23:26 common:20] 关闭浏览器
+[I 190325 23:23:26 client:36] 加载测试用例
+[I 190325 23:23:29 common:20] 打开浏览器
+[I 190325 23:23:32 common:20] 关闭浏览器
+[I 190325 23:23:33 genreport:47] 报告地址:
+    /Users/xinxi/PycharmProjects/SeleniumRunner/sr/report/20190325232332_result.html
+[I 190325 23:23:33 client:131] *****************************************************************
+[I 190325 23:29:06 client:96] *****************************************************************
+[I 190325 23:29:06 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban.yml
+[I 190325 23:29:06 client:21] 初始化环境
+[I 190325 23:29:06 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_douban2.yml
+[I 190325 23:29:06 client:21] 初始化环境
+[I 190325 23:29:06 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml
+[I 190325 23:29:06 client:21] 初始化环境
+[I 190325 23:29:06 client:114] /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu.yml
+[I 190325 23:29:06 client:21] 初始化环境
+[I 190325 23:29:06 client:125] 本次共执行:4组测试用例
+[I 190325 23:29:06 client:36] 加载测试用例
+[I 190325 23:29:09 common:20] 打开浏览器
+[I 190325 23:29:18 common:20] 关闭浏览器
+[I 190325 23:29:21 common:20] 打开浏览器
+[E 190325 23:29:35 location:156] display_wait Exception:('class name', 'account-tab-account')
+[E 190325 23:29:36 client:76] 用例执行异常:
+[I 190325 23:29:36 common:20] 关闭浏览器
+[I 190325 23:29:36 client:36] 加载测试用例
+[I 190325 23:29:39 common:20] 打开浏览器
+[E 190325 23:32:24 location:156] display_wait Exception:('id', 'inp-query')
+[E 190325 23:32:24 client:76] 用例执行异常:Message: no such window: target window already closed
+    from unknown error: web view not found
+      (Session info: chrome=56.0.2906.0)
+      (Driver info: chromedriver=2.28.455517 (2c6d2707d8ea850c862f04ac066724273981e88f),platform=Mac OS X 10.13.6 x86_64)
+    
+[I 190325 23:32:24 common:20] 关闭浏览器
+[E 190325 23:32:24 location:110] 关闭浏览器异常:Message: no such window: target window already closed
+    from unknown error: web view not found
+      (Session info: chrome=56.0.2906.0)
+      (Driver info: chromedriver=2.28.455517 (2c6d2707d8ea850c862f04ac066724273981e88f),platform=Mac OS X 10.13.6 x86_64)
+    
+[I 190325 23:32:24 client:36] 加载测试用例
+[I 190325 23:32:27 common:20] 打开浏览器
+[E 190325 23:32:35 location:156] display_wait Exception:('id', 'kw2')
+[E 190325 23:32:36 client:76] 用例执行异常:
+[I 190325 23:32:36 common:20] 关闭浏览器
+[I 190325 23:32:39 common:20] 打开浏览器
+[I 190325 23:32:42 common:20] 关闭浏览器
+[I 190325 23:32:42 client:36] 加载测试用例
+[I 190325 23:32:45 common:20] 打开浏览器
+[I 190325 23:32:48 common:20] 关闭浏览器
+[I 190325 23:32:50 genreport:47] 报告地址:
+    /Users/xinxi/PycharmProjects/SeleniumRunner/sr/report/20190325233248_result.html
+[I 190325 23:32:50 client:131] *****************************************************************

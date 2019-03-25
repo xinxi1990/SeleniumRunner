@@ -10,7 +10,9 @@ from config import report_folder
 from genreport import GenReport
 logger = init_logger()
 
-total_fail_list= []
+all_total_fail_list= []
+all_total_success_list= []
+all_total_case_list = []
 
 class MainTest(unittest.TestCase):
 
@@ -21,7 +23,6 @@ class MainTest(unittest.TestCase):
         testcase_path = param["testcase_path"]
         self.driver_path = param["driver_path"]
         self.case_info = MainTest.load_case_file(testcase_path)
-
 
 
     @staticmethod
@@ -44,7 +45,7 @@ class MainTest(unittest.TestCase):
                 except Exception as  e:
                     if driver == None:
                         driver = WDriver().get_driver()
-                location = Location(driver,case_name,description)
+                location = Location(driver,case_name + "_" + test_case,description)
                 for case_step in yaml_output[test_case]:
                     is_success = True
                     try:
@@ -72,15 +73,19 @@ class MainTest(unittest.TestCase):
                             element = location.create_location(case_step['location'])
                             location.when_element_click(case_step["time"],element)
                     except Exception as e:
-                        logger.error("加载测试用例异常:{}".format(e))
+                        logger.error("用例执行异常:{}".format(e))
                         is_success = False
+                        break
                 if is_success:
                     location.create_success_info()
                 location.close_brower()
 
-
-        total_case_list =  location.get_success_info_list() + location.get_fail_info_list()
-        GenReport(len(location.get_success_info_list()),len(location.get_fail_info_list()),total_case_list).render_reprot()
+        all_total_fail_list += location.get_fail_info_list()
+        all_total_success_list += location.get_success_info_list()
+        global all_total_fail_list
+        global all_total_success_list
+        # total_case_list =  location.get_success_info_list() + location.get_fail_info_list()
+        # GenReport(len(location.get_success_info_list()),len(location.get_fail_info_list()),total_case_list).render_reprot()
 
 
 
@@ -88,7 +93,7 @@ class MainTest(unittest.TestCase):
 
 
 def main_run():
-    logger.warning("*****************************************************************")
+    logger.info("*****************************************************************")
     parser = argparse.ArgumentParser(
         description='Selenium Testing')
     parser.add_argument(
@@ -102,7 +107,6 @@ def main_run():
     driver_path = str(args.driver_path)
     print("\033[0;32m{0}\033[0m".format(testcase_path))
     print("\033[0;32m{0}\033[0m".format(driver_path))
-
     suite = unittest.TestSuite()
     if os.path.isdir(testcase_path):
        for file in os.listdir(testcase_path):
@@ -112,21 +116,19 @@ def main_run():
            param['testcase_path'] = testcase_file
            param['driver_path'] = driver_path
            suite.addTest(MainTest('test_case', param=param))
-
     elif os.path.isfile(testcase_path):
         param = {}
         param['testcase_path'] = testcase_path
         param['driver_path'] = driver_path
         suite.addTest(MainTest('test_case', param=param))
-
     test_count = suite.countTestCases()
     logger.info("本次共执行:{}组测试用例".format(test_count))
     runner = unittest.TextTestRunner()
     runner.run(suite)
-    #debug模式
 
-    # GenReport(location.get_fail_info_list()).render_reprot()
-    logger.warning("*****************************************************************")
+    all_total_case_list = all_total_success_list + all_total_fail_list
+    GenReport(len(all_total_success_list),len(all_total_fail_list),all_total_case_list).render_reprot()
+    logger.info("*****************************************************************")
 
 
 

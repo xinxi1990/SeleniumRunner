@@ -21,7 +21,7 @@ test_case_2:
   - action: "open_brower"
     location: "http://www.douban.com"
     time: 1
-  - action: "switch_to_frame"
+  - action: "switch_frame"
     time: 1
   - action: "click"
     location: "By.CLASS_NAME,account-tab-account"

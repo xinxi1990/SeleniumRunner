@@ -126,7 +126,6 @@ class Location():
             raise Exception
 
 
-
     def switch_windows(self):
         '''
         切换窗口
@@ -140,6 +139,7 @@ class Location():
             logger.error(fail_detail)
             self.create_fail_info(case_name=self.case_name, fail_detail=fail_detail)
             raise Exception
+
 
     def display_wait(self,time,loc):
         '''
