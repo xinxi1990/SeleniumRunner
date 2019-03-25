@@ -7,6 +7,7 @@ from wdriver import WDriver
 from location import Location
 from logger import init_logger
 from config import report_folder
+from genreport import GenReport
 logger = init_logger()
 
 total_base64_image_list = []
@@ -69,34 +70,10 @@ class MainTest(unittest.TestCase):
                     except Exception as e:
                         logger.error("加载测试用例异常:{}".format(e))
                 location.close_brower()
-        # print(len(location.get_fail_info_list()))
-        # base64_image_list = location.get_base64_image_list()
-        # total_base64_image_list.append(base64_image_list)
-        # global base64_image_list
-        # global total_base64_image_list
-        print(location.get_fail_info_list())
+
+        GenReport(location.get_fail_info_list()).render_reprot()
 
 
-
-    @classmethod
-    def tearDownClass(cls):
-        logger.info("结束全部测试")
-
-    # def main_run_back():
-    #     opts, args = getopt.getopt(sys.argv[1:], '-h-f:', ['help', 'filepath='])
-    #     fileName = None
-    #     for opt_name, opt_value in opts:
-    #         if opt_name in ('-h', '--help'):
-    #             logger.info("帮助")
-    #             exit()
-    #         if opt_name in ('-f', '--filepath'):
-    #             fileName = opt_value
-    #             logger.info("用例路径:" + fileName)
-    #
-    #     suite = unittest.TestSuite()
-    #     suite.addTest(Main('test_case'))
-    #     runner = unittest.TextTestRunner()
-    #     runner.run(suite)
 
 
 
@@ -138,22 +115,9 @@ def main_run():
     runner = unittest.TextTestRunner()
     runner.run(suite)
     #debug模式
-    logger.info(len(total_base64_image_list))
+
     logger.warning("*****************************************************************")
 
-    # from HTMLTestRunner_cn.HTMLTestRunner_cn import HTMLTestRunner
-    # current_now = time.strftime("%Y%m%d%H%M%S", time.localtime())
-    # report_filename = os.path.join(report_folder, current_now + "_result.html")
-    # fp = open(report_filename, 'wb')
-    # runner = HTMLTestRunner(
-    #     stream=fp,
-    #     title=u'SeleniumRunner自动化执行报告',
-    #     description=u'用例执行情况:',
-    #     verbosity=2, retry=0, save_last_try=True)
-    # # verbosity表示报告级别
-    # # retry表示失败重试机制
-    # runner.run(suite)
-    # fp.close()
 
 
 

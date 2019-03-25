@@ -59,8 +59,6 @@ class Location():
             global base64_image_list
 
 
-
-    # @Common.print_loggr("显示等待定位元素")
     def create_location(self,location):
         try:
             method = str(location).split(",")[0]
@@ -82,25 +80,30 @@ class Location():
             elif method == "By.TAG_NAME":
                 return (By.TAG_NAME, value)
         except Exception as e:
-            logger.info("捕获异常:{}".format(e))
-            fail_info = {}
-            fail_info["case_name"] = self.case_name
-            fail_info["fail_info"] = self.screenshot_as_base64()
-            # base64_image_list.append(self.screenshot_as_base64())
-            # global base64_image_list
-            fail_info_list.append(fail_info)
-            global fail_info_list
+            fail_detail = "显示定位元素异常:{}".format(location)
+            logger.error(fail_detail)
+            self.create_fail_info(case_name=self.case_name, fail_detail=fail_detail)
 
 
 
     @Common.print_loggr("打开浏览器")
     def open_brower(self,url):
-        self.driver.get(url)
+        try:
+            self.driver.get(url)
+        except Exception as e:
+            fail_detail = "打开浏览器异常:{}".format(url)
+            logger.error(fail_detail)
+            self.create_fail_info(case_name=self.case_name, fail_detail=fail_detail)
 
 
     @Common.print_loggr("关闭浏览器")
     def close_brower(self):
-        self.driver.close()
+        try:
+            self.driver.close()
+        except Exception as e:
+            fail_detail = "关闭浏览器异常:{}".format(url)
+            logger.error(fail_detail)
+            self.create_fail_info(case_name=self.case_name, fail_detail=fail_detail)
 
 
     def switch_frame(self):
@@ -130,17 +133,9 @@ class Location():
             element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(loc))
             return element
         except Exception as e:
-            logger.error("显示等待元素超时:{}".format(loc))
-            fail_info = {}
-            fail_info["case_name"] = self.case_name
-            ail_info["fail_info"] = "显示等待元素超时:{}".format(loc)
-            fail_info["fail_sceenshot"] = self.screenshot_as_base64()
-            # base64_image_list.append(self.screenshot_as_base64())
-            # global base64_image_list
-            fail_info_list.append(fail_info)
-            global fail_info_list
-
-
+            fail_detail = "显示等待元素超时:{}".format(loc)
+            logger.error(fail_detail)
+            self.create_fail_info(case_name=self.case_name,fail_detail=fail_detail)
 
     def scroll_down(self):
         js="window.scrollTo(0,document.body.scrollHeight)"
@@ -164,7 +159,6 @@ class Location():
            logger.info("不存在元素:{}".format(_loc))
 
 
-
     def screenshot_as_base64(self):
         '''
         base64位截图
@@ -184,3 +178,18 @@ class Location():
     def wait_sleep(self,wait_time):
         time.sleep(int(wait_time))
 
+
+    def create_fail_info(self,**kwargs):
+        '''
+        组装测试异常数据
+        :return:
+        '''
+        fail_info = {}
+        fail_info["methodName"] = kwargs['case_name']
+        fail_info["description"] = kwargs['case_name']
+        fail_info["spendTime"] = "11ms"
+        fail_info["status"] = "FAIL"
+        fail_image =  "<img src=\"data:image/png;base64,{}\"/>".format(self.screenshot_as_base64())
+        fail_info["log"] =  [kwargs['fail_detail'],fail_image]
+        fail_info_list.append(fail_info)
+        global fail_info_list

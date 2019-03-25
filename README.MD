@@ -3,7 +3,7 @@
 
 # 源码运行
 ```angularjs
-python main.py sc --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml /
+python main.py sr --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/testcase/test_baidu_fail.yml /
                   --driver_path /Users/xinxi/PycharmProjects/SeleniumRunner/entity/chromedriver_mac
 ```
 #  安装包运行

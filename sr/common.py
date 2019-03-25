@@ -4,8 +4,9 @@
 import time,os
 import base64
 from PIL import Image, ImageGrab
-from logger import init_logger
 from config import screen_folder
+from wdriver import WDriver
+from logger import init_logger
 logger = init_logger()
 
 
@@ -38,3 +39,18 @@ class Common():
         # 读取文件内容，转换为base64编码
         f.close()
         return ls_f
+
+
+    @staticmethod
+    def auto_screen(func):
+        '''截图装饰器
+           自动截图装饰器
+        '''
+
+        def inner(*args, **kwargs):
+            try:
+                f = func(*args, **kwargs)
+                return f
+            except:
+                WDriver().get_driver().get_screenshot_as_base64()  # 失败后截图
+        return inner
