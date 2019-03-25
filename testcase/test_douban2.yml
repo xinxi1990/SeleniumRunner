@@ -1,0 +1,22 @@
+name: "test for douban"
+description: "test for baidu fail"
+test_case_1:
+  - action: "open_brower"
+    location: "http://www.douban.com"
+    time: 2
+  - action: "click"
+    location: "By.CLASS_NAME,lnk-book"
+    time: 2
+  - action: "scroll_down"
+    time: 2
+  - action: "scroll_top"
+    time: 2
+  - action: "switch_windows"
+    time: 2
+  - action: "send_keys"
+    location: "By.ID,inp-query"
+    text: "18513571170"
+    time: 1
+  - action: "wait_sleep"
+    time: 2
+

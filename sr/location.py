@@ -17,14 +17,15 @@ from exception import LocationError
 logger = init_logger()
 
 base64_image_list = []
+success_info_list = []
 fail_info_list = []
-
 
 class Location():
 
-    def __init__(self,driver,case_name):
+    def __init__(self,driver,case_name,description):
         self.driver = driver
         self.case_name = case_name
+        self.description = description
 
 
     def location_element(self,location):
@@ -54,9 +55,11 @@ class Location():
             elif method == "By.TAG_NAME":
                 return self.driver.find_element(By.TAG_NAME, value)
         except Exception as e:
-            logger.info("捕获异常:{}".format(e))
-            base64_image_list.append(self.screenshot_as_base64())
-            global base64_image_list
+            fail_detail = "location_element Exception:{}".format(e)
+            logger.error(fail_detail)
+            self.create_fail_info(case_name=self.case_name, fail_detail=fail_detail)
+            raise Exception
+
 
 
     def create_location(self,location):
@@ -80,9 +83,10 @@ class Location():
             elif method == "By.TAG_NAME":
                 return (By.TAG_NAME, value)
         except Exception as e:
-            fail_detail = "显示定位元素异常:{}".format(location)
+            fail_detail = "create_location Exception:{}".format(location)
             logger.error(fail_detail)
             self.create_fail_info(case_name=self.case_name, fail_detail=fail_detail)
+            raise Exception
 
 
 
@@ -91,9 +95,10 @@ class Location():
         try:
             self.driver.get(url)
         except Exception as e:
-            fail_detail = "打开浏览器异常:{}".format(url)
+            fail_detail = "open_brower Exception:{}".format(url)
             logger.error(fail_detail)
             self.create_fail_info(case_name=self.case_name, fail_detail=fail_detail)
+            raise Exception
 
 
     @Common.print_loggr("关闭浏览器")
@@ -101,9 +106,10 @@ class Location():
         try:
             self.driver.close()
         except Exception as e:
-            fail_detail = "关闭浏览器异常:{}".format(url)
+            fail_detail = "关闭浏览器异常:{}".format(e)
             logger.error(fail_detail)
             self.create_fail_info(case_name=self.case_name, fail_detail=fail_detail)
+            raise Exception
 
 
     def switch_frame(self):
@@ -111,16 +117,29 @@ class Location():
         切换frame
         :return:
         '''
-        self.driver.switch_to.frame(self.driver.find_elements_by_tag_name("iframe")[0])
+        try:
+            self.driver.switch_to.frame(self.driver.find_elements_by_tag_name("iframe")[0])
+        except Exception as e:
+            fail_detail = "switch_frame Exception:{}".format(e)
+            logger.error(fail_detail)
+            self.create_fail_info(case_name=self.case_name, fail_detail=fail_detail)
+            raise Exception
+
+
 
     def switch_windows(self):
         '''
         切换窗口
         :return:
         '''
-        handles_list = self.driver.window_handles
-        self.driver.switch_to.window(str(handles_list[-1]))
-
+        try:
+            handles_list = self.driver.window_handles
+            self.driver.switch_to.window(str(handles_list[-1]))
+        except Exception as e:
+            fail_detail = "switch_windows Exception:{}".format(e)
+            logger.error(fail_detail)
+            self.create_fail_info(case_name=self.case_name, fail_detail=fail_detail)
+            raise Exception
 
     def display_wait(self,time,loc):
         '''
@@ -133,17 +152,34 @@ class Location():
             element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(loc))
             return element
         except Exception as e:
-            fail_detail = "显示等待元素超时:{}".format(loc)
+            fail_detail = "display_wait Exception:{}".format(loc)
             logger.error(fail_detail)
             self.create_fail_info(case_name=self.case_name,fail_detail=fail_detail)
+            raise Exception
+
 
     def scroll_down(self):
-        js="window.scrollTo(0,document.body.scrollHeight)"
-        self.driver.execute_script(js)
+        try:
+            js="window.scrollTo(0,document.body.scrollHeight)"
+            self.driver.execute_script(js)
+        except Exception as e:
+            fail_detail = "scroll_down Exception:{}".format(e)
+            logger.error(fail_detail)
+            self.create_fail_info(case_name=self.case_name,fail_detail=fail_detail)
+            raise Exception
+
 
     def scroll_top(self):
-        js="window.scrollTo(0,0)"
-        self.driver.execute_script(js)
+        try:
+            js="window.scrollTo(0,0)"
+            self.driver.execute_script(js)
+        except Exception as e:
+            fail_detail = "scroll_top Exception:{}".format(e)
+            logger.error(fail_detail)
+            self.create_fail_info(case_name=self.case_name,fail_detail=fail_detail)
+            raise Exception
+
+
 
     def when_element_click(self,time,loc):
         '''
@@ -164,7 +200,6 @@ class Location():
         base64位截图
         :return:
         '''
-        logger.info("截取当前错误")
         return self.driver.get_screenshot_as_base64()
 
 
@@ -173,6 +208,9 @@ class Location():
 
     def get_fail_info_list(self):
         return fail_info_list
+
+    def get_success_info_list(self):
+        return success_info_list
 
 
     def wait_sleep(self,wait_time):
@@ -186,10 +224,25 @@ class Location():
         '''
         fail_info = {}
         fail_info["methodName"] = kwargs['case_name']
-        fail_info["description"] = kwargs['case_name']
-        fail_info["spendTime"] = "11ms"
+        fail_info["description"] = self.description
+        fail_info["spendTime"] = "10ms"
         fail_info["status"] = "FAIL"
         fail_image =  "<img src=\"data:image/png;base64,{}\"/>".format(self.screenshot_as_base64())
         fail_info["log"] =  [kwargs['fail_detail'],fail_image]
         fail_info_list.append(fail_info)
         global fail_info_list
+
+
+    def create_success_info(self):
+        '''
+        组装测试异常数据
+        :return:
+        '''
+        success_info = {}
+        success_info["methodName"] = self.case_name
+        success_info["description"] = self.description
+        success_info["spendTime"] = "10ms"
+        success_info["status"] = "SUCCESS"
+        success_info["log"] =  []
+        success_info_list.append(success_info)
+        global success_info_list

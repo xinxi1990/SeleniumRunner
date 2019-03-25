@@ -21,7 +21,6 @@ python main.py sr --testcase_path /Users/xinxi/PycharmProjects/SeleniumRunner/te
 ```
 
 
-
 # 打包
 建立setup.py
 python setup.py bdist_egg
@@ -79,8 +78,6 @@ action: "switch_to_frame"
 action: "switch_windows"
 ```
 
-
-
 ## 向上滑动
 ```angularjs
 action: "scroll_top"
@@ -95,6 +92,7 @@ action: "scroll_down"
 # 用例编写
 ```
 name: "test for douban"
+description: "test for baidu fail"
 test_case_1:
   - action: "open_brower"
     location: "http://www.douban.com"
@@ -114,11 +112,5 @@ test_case_1:
     time: 1
 ```
 
-
-# 断言
-
-https://pypi.org/project/PyHamcrest/
-
-
-# bdd驱动
-https://github.com/pytest-dev/pytest-bdd
+# 测试报告
+![image](report.png)

@@ -1,10 +1,11 @@
 name: "test for baidu"
+description: "test for baidu fail"
 test_case_1:
   - action: "open_brower"
     location: "http://www.baidu.com"
     time: 1
   - action: "send_keys"
-    location: "By.ID,kw1"
+    location: "By.ID,kw"
     text: "test selenium"
     time: 1
 test_case_2:

@@ -6963,7 +6963,7 @@
 <body class="gray-bg">
 <div class="row  border-bottom white-bg dashboard-header">
     <div class="col-sm-12 text-center">
-        <span style="color: #1ab394; font-size: 20px; font-weight: 700">SeleniumRunner测试报告</span>
+        <span style="color: #1ab394; font-size: 20px; font-weight: 700">测试报告</span>
     </div>
 </div>
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -7127,7 +7127,7 @@
 	}
 </script>
 <script type="text/javascript">
-    var resultData = {{result_data}};
+    var resultData = {'testFail': '1', 'totalTime': '100ms', 'testResult': [{'status': 'SUCCESS', 'spendTime': '10ms', 'methodName': 'test for douban', 'description': 'test for douban', 'log': []}], 'testPass': '1', 'testName': '1', 'testAll': '1', 'beginTime': '2019-03-25 21:42:24', 'testSkip': 0};
 
     function clickRow(obj){
         $("#detailBody").children("tr").attr("style","font-family: Consolas");

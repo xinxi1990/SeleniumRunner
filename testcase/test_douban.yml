@@ -1,4 +1,5 @@
 name: "test for douban"
+description: "test for baidu fail"
 test_case_1:
   - action: "open_brower"
     location: "http://www.douban.com"

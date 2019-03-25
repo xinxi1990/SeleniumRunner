@@ -10,7 +10,7 @@ from config import report_folder
 from genreport import GenReport
 logger = init_logger()
 
-total_base64_image_list = []
+total_fail_list= []
 
 class MainTest(unittest.TestCase):
 
@@ -37,14 +37,16 @@ class MainTest(unittest.TestCase):
         case_list = dict(yaml_output).keys()
         for test_case in case_list:
             case_name = yaml_output["name"]
-            if test_case != 'name':
+            description = yaml_output["description"]
+            if test_case != 'name' and test_case != 'description':
                 try:
                     driver = WDriver().init_driver(self.driver_path)
                 except Exception as  e:
                     if driver == None:
                         driver = WDriver().get_driver()
-                location = Location(driver,case_name)
+                location = Location(driver,case_name,description)
                 for case_step in yaml_output[test_case]:
+                    is_success = True
                     try:
                         if case_step['action'] == "open_brower":
                            location.open_brower(case_step['location'])
@@ -55,7 +57,7 @@ class MainTest(unittest.TestCase):
                         elif case_step['action'] == "send_keys":
                             element = location.create_location(case_step['location'])
                             location.display_wait(case_step["time"], element).send_keys(case_step['text'])
-                        elif case_step['action'] == "switch_to_frame":
+                        elif case_step['action'] == "switch_frame":
                             location.wait_sleep(case_step["time"])
                             location.switch_frame()
                         elif case_step['action'] == "switch_windows":
@@ -64,14 +66,21 @@ class MainTest(unittest.TestCase):
                             location.scroll_down()
                         elif case_step['action'] == "scroll_top":
                             location.scroll_top()
+                        elif case_step['action'] == "wait_sleep":
+                            location.wait_sleep( case_step["time"])
                         elif case_step['action'] == "when_element_click":
                             element = location.create_location(case_step['location'])
                             location.when_element_click(case_step["time"],element)
                     except Exception as e:
                         logger.error("加载测试用例异常:{}".format(e))
+                        is_success = False
+                if is_success:
+                    location.create_success_info()
                 location.close_brower()
 
-        GenReport(location.get_fail_info_list()).render_reprot()
+
+        total_case_list =  location.get_success_info_list() + location.get_fail_info_list()
+        GenReport(len(location.get_success_info_list()),len(location.get_fail_info_list()),total_case_list).render_reprot()
 
 
 
@@ -116,6 +125,7 @@ def main_run():
     runner.run(suite)
     #debug模式
 
+    # GenReport(location.get_fail_info_list()).render_reprot()
     logger.warning("*****************************************************************")
 
 
